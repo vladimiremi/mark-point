@@ -1,0 +1,52 @@
+.bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 1px 2px 1px rgb(0 0 0 / 20%);
+  align-items: center;
+  height: auto;
+  padding: 3vh 2vh;
+  position: fixed;
+}
+
+.bar > section {
+  display: flex;
+  margin-right: 5vh;
+  font-size: 4vh;
+  width: 28vh;
+  color: rgb(217, 217, 219);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar > section img {
+  width: 4vh;
+  height: 4vh;
+  border-radius: 50%;
+}
+
+.bar > section .userName {
+  font-size: 1.8vh;
+  font-weight: 1000;
+}
+
+.bar > section div:first-child {
+  display: flex;
+}
+
+.bar > section div:first-child > p {
+  color: black;
+  border: solid 0.5px;
+  font-size: 1.2vh;
+  height: 0.6vh;
+  width: 2.7vh;
+  padding-bottom: 0.9vh;
+  text-align: center;
+  border-radius: 2rem;
+}
+
+@media (max-width: 900px) {
+  .bar {
+  }
+}

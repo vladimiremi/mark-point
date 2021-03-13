@@ -1,0 +1,87 @@
+.login {
+  background-image: url("../../assets/background.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  display: block;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.login-container {
+  background-color: rgba(0, 0, 0, 0.39);
+  display: flex;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 4rem 2rem 2rem 3rem;
+}
+
+.login-container > div:first-child {
+  font-size: 3rem;
+  margin-left: 5px;
+  min-width: 40rem;
+  margin-right: 117px;
+  margin-left: 26px;
+}
+
+.login-container > div:first-child > h1 {
+  color: white;
+  font-size: 88px;
+}
+
+.login-container > div:first-child > p {
+  color: white;
+  font-size: 49px;
+}
+
+.login-container > div:first-child > h5 {
+  color: white;
+  align-items: flex-end;
+  margin-top: 33%;
+  font-size: 24px;
+}
+
+.login-container > div:last-child {
+  font-size: 30px;
+  display: block;
+  background-color: white;
+  height: 29.7rem;
+  min-width: 30rem;
+  display: inline;
+}
+
+.login-container > div:last-child p {
+  font-weight: 600;
+  color: rgb(63, 63, 63);
+}
+
+.login-container > div:last-child button {
+  padding: 16px 91px 16px;
+  background-color: rgb(0, 102, 240);
+  border: none;
+  color: white;
+  border-radius: 2px;
+  margin-top: 31%;
+}
+.login-container > div:last-child section {
+  margin: 56px 26px;
+}
+.login-container > div:last-child form {
+  display: inline-grid;
+}
+
+.login-container > div:last-child input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: #0000002e solid 1px;
+  margin-top: 56px;
+  /* padding: 13px 117px; */
+  width: 25rem;
+  padding-bottom: 8px;
+  padding-left: 7px;
+}
