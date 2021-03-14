@@ -1,6 +1,6 @@
 # MARK POINT
 
-Esse é um repositório que tem como objetivo armazenar o progreço do desafio enviado pela empresa [HYBRIUN](https://www.linkedin.com/company/hybriun/).
+Esse é um repositório que tem como objetivo armazenar o progresso do desafio enviado pela empresa [HYBRIUN](https://www.linkedin.com/company/hybriun/).
 
 # 🚀 Technology
 
