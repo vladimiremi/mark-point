@@ -4,16 +4,75 @@
 
 .list-container > .body {
     position: fixed;
-    margin: 14vh 14vh 0;
+    margin: 14vh 15vh 0;
+    
+    width: 92.5%;
+    height: 100%;
+    background-color: rgb(248, 248, 248);
+    
+   
 }
 
 .list-container > .body section {
-    display: flex;
+    display: block;
     list-style: none;
+}
+
+@media (max-width: 900px) {
 }
 
 .list-container > .body ul {
     list-style: none;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
 }
+
+
+.list-container > .body h2 {
+    color: rgb(74, 85, 93);
+    font-size: 3vh;
+    font-weight: 300;
+    margin-left: 3vh;
+}
+
+
+
+@media (min-width:100vh) {
+    .collaborator-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:100vh) {
+    .collaborator-list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .list-container > .body {
+        width: 79.5%;
+    }
+}
+
+.collaborator-list > li {
+    margin: 2.5vh;
+    box-shadow: 0.1vh 0.14vh 0.3vh 0.1vh rgb(0 0 0 / 20%);
+    border-radius: 0.3vh;
+    background-color: rgb(255, 255, 255);
+    padding: 2vh 3vh 2vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: rgb(74, 85, 93);
+}
+
+.collaborator-list > li img {
+    width: 6.3vh;
+    height: 6.3vh;
+    border-radius: 50%;
+}
+
+.collaborator-list > li p{
+    margin-left: 2vh;
+    font-size: 2.2vh;
+}
+

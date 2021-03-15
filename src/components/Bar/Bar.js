@@ -1,10 +1,16 @@
 import {IoMdNotificationsOutline, IoMdMenu, IoMdApps } from 'react-icons/io';
 import './styles.css';
+import profile from '../../assets/perfil.png';
+import Drawer from '../Drawer/Drawer';
+import { useState } from 'react';
+
 export default function Bar() {
+    const [modal, setModal] = useState(false);
+
     return(
         <div>
             <div className="bar">
-                <IoMdMenu fontSize="4vh"/>
+                <IoMdMenu onClick={() => setModal(!modal)} fontSize="4vh"/>
                 <section>
                     <div>
                         <IoMdNotificationsOutline />
@@ -13,10 +19,14 @@ export default function Bar() {
                     <IoMdApps />
                     <p className="userName">Vladimir Costa</p> 
     
-                    <img src="https://github.com/vladimiremi.png" alt=""/>
+                    <img src={profile} alt=""/>
 
                 </section>
             </div>
+            {
+                modal ? <Drawer /> : false
+            }
+            
         </div>
     );
 }

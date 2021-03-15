@@ -1,36 +1,44 @@
 import Bar from "../../components/Bar/Bar";
 import Drawer from "../../components/Drawer/Drawer";
 import './styles.css';
+import profile from '../../assets/perfil.png';
+
 export default function List() {
+
+
+
     return(
         <div className='list-container'>
             <Bar />
-            <Drawer />
             <body className="body">
                 <section>
-                    <p>lista</p>
-                    <ul>
+                    <h2>Lista de colaboradores</h2>
+                    <ul className="collaborator-list">
                         <li>
-                            Vladimir
+                            <img src={profile} alt=""/>
+                            <p>Vladimir Costa</p>
                         </li>
                         <li>
-                            Vladimir
+                            <img src={profile} alt=""/>
+                            <p>Vladimir Costa</p>
                         </li>
                         <li>
-                            Vladimir
+                            <img src={profile} alt=""/>
+                            <p>Vladimir Costa</p>
                         </li>
                         <li>
-                            Vladimir
+                            <img src={profile} alt=""/>
+                            <p>Vladimir Costa</p>
                         </li>
                         <li>
-                            Vladimir
+                            <img src={profile} alt=""/>
+                            <p>Vladimir Costa</p>
                         </li>
                         <li>
-                            Vladimir
+                            <img src={profile} alt=""/>
+                            <p>Vladimir Costa</p>
                         </li>
-                        <li>
-                            Vladimir
-                        </li>
+                        
                     </ul>
 
                 </section>
