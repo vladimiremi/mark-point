@@ -37,7 +37,7 @@
 
 .bar > section div:first-child > p {
   color: black;
-  border: solid 0.5px;
+  border: solid 0.2vh;
   font-size: 1.2vh;
   height: 0.6vh;
   width: 2.7vh;

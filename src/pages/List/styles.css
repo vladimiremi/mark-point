@@ -1,0 +1,19 @@
+.list-container {
+    display: block;
+}
+
+.list-container > .body {
+    position: fixed;
+    margin: 14vh 14vh 0;
+}
+
+.list-container > .body section {
+    display: flex;
+    list-style: none;
+}
+
+.list-container > .body ul {
+    list-style: none;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
