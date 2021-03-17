@@ -1,4 +1,5 @@
-import {IoMdNotificationsOutline, IoMdMenu, IoMdApps } from 'react-icons/io';
+import {IoMdNotificationsOutline, IoMdMenu} from 'react-icons/io';
+import {BsGrid} from 'react-icons/bs';
 import './styles.css';
 import profile from '../../assets/perfil.png';
 import Drawer from '../Drawer/Drawer';
@@ -10,13 +11,13 @@ export default function Bar() {
     return(
         <div>
             <div className="bar">
-                <IoMdMenu onClick={() => setModal(!modal)} fontSize="4vh"/>
+                <IoMdMenu cursor="pointer" onClick={() => setModal(!modal)} fontSize="4vh"/>
                 <section>
                     <div>
                         <IoMdNotificationsOutline />
                         <p>3</p>
                     </div>
-                    <IoMdApps />
+                    <BsGrid/>
                     <p className="userName">Vladimir Costa</p> 
     
                     <img src={profile} alt=""/>

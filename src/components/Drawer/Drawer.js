@@ -1,4 +1,4 @@
-import { IoMdMenu } from 'react-icons/io';
+import { IoMdMenu, IoMdPersonAdd } from 'react-icons/io';
 import './styles.css';
 
 export default function Drawer() {
@@ -11,7 +11,7 @@ export default function Drawer() {
                 <p >Listagem de colaboradores</p>
             </div>
             <div className="icon-drawer">
-                <IoMdMenu fontSize="6vh" color="rgb(0, 102, 240)" />
+                <IoMdPersonAdd fontSize="6vh" color="rgb(0, 102, 240)" />
                 
                 <p>Adicionar um colaborador</p>
             </div>

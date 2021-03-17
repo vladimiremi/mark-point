@@ -3,22 +3,19 @@
 }
 
 .list-container > .body {
-    position: fixed;
-    margin: 14vh 15vh 0;
-    
+
+    margin: 0vh 15vh 0;
     width: 92.5%;
-    height: 100%;
     background-color: rgb(248, 248, 248);
     
    
 }
 
+
 .list-container > .body section {
     display: block;
     list-style: none;
-}
-
-@media (max-width: 900px) {
+    padding-top: 14vh;
 }
 
 .list-container > .body ul {
@@ -49,7 +46,8 @@
     }
 
     .list-container > .body {
-        width: 79.5%;
+        width: 94.5%;
+        margin: 0vh 2vh 0;
     }
 }
 
