@@ -1,0 +1,247 @@
+.collaborator-container {
+  display: block;
+}
+
+.collaborator-container > .body {
+  margin: 0vh 15vh 0;
+  width: 92.5%;
+  background-color: rgb(248, 248, 248);
+}
+
+.title {
+  display: block;
+  margin-left: 3vh;
+  padding-top: 14.3vh;
+}
+
+.title > div h2 {
+  color: rgb(74, 85, 93);
+  font-size: 3vh;
+  font-weight: 400;
+  margin-left: 3vh;
+}
+
+.title > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title > div section {
+  display: flex;
+}
+
+.title > div section button:first-child {
+  margin-right: 1.33vh;
+}
+
+.title::after {
+  content: "";
+  width: 98%;
+  height: 4.01vh;
+  border-bottom-color: rgb(171, 171, 171);
+  border-bottom-style: solid;
+  border-bottom-width: 0.3vh;
+  display: block;
+}
+
+/* .collaborator-container > .body section:first-child h2:first-child {
+  display: block;
+  list-style: none;
+  padding-top: 14vh;
+} */
+
+@media (min-width: 100vh) {
+  .collaborator-history-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .body-collarotor {
+    display: flex;
+  }
+}
+
+@media (max-width: 100vh) {
+  .collaborator-history-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .collaborator-container > .body {
+    width: 94.5%;
+    margin: 0vh 2vh 0;
+  }
+
+  .body-collarotor {
+    display: block;
+  }
+}
+
+.collaborator-history-list > li p {
+  margin-left: 2vh;
+  font-size: 2.2vh;
+}
+
+.body-collarotor__profile {
+  background-color: rgb(255, 255, 255);
+  margin-top: 4vh;
+  margin-left: 3vh;
+  display: block;
+  width: 58vh;
+  margin-right: 11vh;
+  height: 57vh;
+  border-radius: 1vh;
+  box-shadow: 0.1vh 0.14vh 0.3vh 0.1vh rgb(0 0 0 / 20%);
+}
+
+.body-collarotor__profile > section:first-child {
+  display: flex;
+  padding-top: 3vh;
+  align-items: center;
+  margin-left: 6vh;
+}
+
+.body-collarotor__profile img {
+  width: 8vh;
+  height: 8vh;
+  border-radius: 50%;
+}
+
+.body-collarotor__profile > section:first-child div h2 {
+  color: rgb(74, 85, 93);
+  font-size: 3vh;
+  font-weight: 400;
+  margin-left: 3vh;
+}
+
+.body-collarotor__profile > section:first-child div p {
+  font-size: 2.15vh;
+}
+
+.body-collarotor__informations {
+  font-size: 2vh;
+  margin-left: 6vh;
+}
+
+.body-collarotor__informations > .information-bold:first-child {
+  margin-bottom: 2vh;
+  margin-top: 3vh;
+}
+
+.body-collarotor__informations-item > section div:last-child {
+  margin-left: 5vh;
+}
+
+.body-collarotor__informations-item > section {
+  display: flex;
+
+  align-items: center;
+}
+
+.information-bold {
+  color: #4a555d;
+  font-weight: 1000;
+}
+
+.body-collarotor__informations-item > div {
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+}
+
+.body-collarotor__informations-work > section {
+  display: flex;
+  margin-bottom: 3.4vh;
+}
+
+.body-collarotor__informations-work > section div:last-child {
+  margin-left: 3vh;
+}
+
+.information-blue {
+  color: #0066f0;
+}
+
+.button {
+  margin-right: 3vh;
+}
+
+.button > button {
+  /* padding: 0vh 0vh 4vh; */
+  font-size: 1.87vh;
+  height: 5vh;
+  width: 22vh;
+  color: white;
+  border: none;
+  border-radius: 3vh;
+  padding-bottom: 0.31vh;
+}
+
+.button > button:first-child {
+  background-color: #f00000;
+}
+.button > button:last-child {
+  background-color: #0066f0;
+}
+
+.collaborator-history {
+  display: block;
+  padding-top: 5vh;
+}
+
+.collaborator-history > h2:first-child {
+  color: rgb(74, 85, 93);
+  font-size: 3vh;
+  font-weight: 400;
+  background: white;
+  margin-right: 3.5vh;
+  margin-bottom: 3.5vh;
+  padding: 3vh;
+  box-shadow: 0.1vh 0.14vh 0.3vh 0.1vh rgb(0 0 0 / 20%);
+  border-radius: 1vh;
+}
+
+.collaborator-history-list > li {
+  margin: 0vh 3.5vh 3.5vh 0vh;
+  box-shadow: 0.1vh 0.14vh 0.3vh 0.1vh rgb(0 0 0 / 20%);
+  border-radius: 1vh;
+  background-color: rgb(255, 255, 255);
+  padding: 3vh 3vh 3vh;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  color: rgb(74, 85, 93);
+  width: 46vh;
+}
+
+.collaborator-history-list__point {
+  justify-content: space-evenly;
+}
+
+.collaborator-history-list__point > div section {
+  margin-top: 1vh;
+}
+
+.collaborator-history-list__point div {
+  text-align: initial;
+}
+
+.collaborator-container > .body ul {
+  list-style: none;
+}
+
+.collaborator-container > .body ul h3 {
+  font-size: 5.8vh;
+}
+
+.collaborator-container > .body ul p {
+  font-size: 2vh;
+}
+
+.collaborator-container > .body ul h4 {
+  color: rgb(74, 85, 93);
+  font-size: 2.8vh;
+  font-weight: 400;
+}
+
+.information-orange {
+  color: #e8b100;
+}
