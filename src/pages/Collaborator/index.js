@@ -56,12 +56,18 @@ export default function Collaborator() {
 
     async function inactivateCollaborator(id) {
 
-       await api.put(`list-collaborator/${id}`, {active: false}, {
+       await api.put(`update-collaborator/${id}`, {active: false}, {
             headers: {
                 Authorization: id_admin,
             }
         })
         history.push('/list');
+    }
+
+    function handleUpdateCollaborator() {
+        
+
+        history.push('/update');
     }
 
     return (
@@ -74,7 +80,7 @@ export default function Collaborator() {
                                 <h2>Detalhes do colaborador</h2>
                                 <section className="button">
                                     <button onClick={ ()=> inactivateCollaborator(idInfCollaborator)}>Inativar Colaborador</button>
-                                    <button>Editar Colaborador</button>
+                                    <button onClick={handleUpdateCollaborator}>Editar Colaborador</button>
                                 </section>
                             </div>
                             

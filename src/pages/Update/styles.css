@@ -1,0 +1,214 @@
+.register-container {
+  display: block;
+}
+
+.register-container > .register-body {
+  margin: 0vh 15vh 0;
+  width: 92.5%;
+  background-color: rgb(248, 248, 248);
+}
+
+.register-title {
+  display: block;
+  margin-left: 3vh;
+  padding-top: 14.3vh;
+}
+
+.register-title > div h2 {
+  color: rgb(74, 85, 93);
+  font-size: 3vh;
+  font-weight: 400;
+}
+
+.register-title > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.register-title > div section {
+  display: flex;
+}
+
+.register-title > div section button:first-child {
+  margin-right: 1.33vh;
+}
+
+.register-title::after {
+  content: "";
+  width: 98%;
+  height: 2vh;
+  border-bottom-color: rgb(171, 171, 171);
+  border-bottom-style: solid;
+  border-bottom-width: 0.3vh;
+  display: block;
+}
+
+@media (min-width: 100vh) {
+  .content-register {
+    display: flex;
+  }
+}
+
+@media (max-width: 100vh) {
+  .register-container > .register-body {
+    width: 94.5%;
+    margin: 0vh 2vh 0;
+  }
+
+  .content-register {
+    display: block;
+  }
+}
+
+.content-register__profile {
+  background-color: rgb(255, 255, 255);
+  margin-top: 2vh;
+  margin-bottom: 4vh;
+  margin-left: 3vh;
+  display: block;
+  width: 62.8vh;
+  margin-right: 11vh;
+  height: 79vh;
+  border-radius: 1vh;
+  box-shadow: 0.1vh 0.14vh 0.3vh 0.1vh rgb(0 0 0 / 20%);
+}
+
+.content-register__profile > section:first-child {
+  display: flex;
+  padding-top: 3vh;
+  align-items: center;
+  margin-left: 6vh;
+}
+
+.content-register__profile > section:first-child div h2 {
+  color: rgb(74, 85, 93);
+  font-size: 3vh;
+  font-weight: 400;
+  margin-left: 3vh;
+}
+
+.content-register__profile > section:first-child div:first-child {
+  background-color: #d1d1d1;
+  color: #b7b7b7;
+  padding: 2vh 2vh 1vh;
+  border-radius: 50%;
+  font-size: 4.9vh;
+  transition: filter 0.3s;
+}
+
+.content-register__profile > section:first-child div:first-child:hover {
+  filter: brightness(0.7);
+}
+
+.content-register__profile > section:first-child div p {
+  font-size: 2.15vh;
+}
+
+.content-register__informations {
+  font-size: 2vh;
+  margin-left: 5vh;
+}
+
+.content-register__informations input {
+  border: none;
+  border-bottom: #0000002e solid 0.22vh;
+  padding: 1.7vh 0vh 2vh;
+  font-size: 1.87vh;
+  font-weight: 600;
+  width: 24.5vh;
+}
+
+.content-register__informations input::-webkit-input-placeholder {
+  color: #d1d1d1;
+}
+
+.content-register__profile > section input {
+  border: none;
+  border-bottom: #0000002e solid 0.22vh;
+  padding: 1.7vh 1vh 2vh 0vh;
+  font-size: 2.5vh;
+  margin-left: 2vh;
+  width: 42vh;
+  align-items: center;
+}
+
+.content-register__informations-work input {
+  margin-right: 2.85vh;
+}
+
+.content-register__informations-work > section div:first-child {
+  margin-bottom: 3vh;
+}
+
+.content-register__profile input::-webkit-input-placeholder {
+  color: #d1d1d1;
+}
+
+.content-register__informations > .information-bold:first-child {
+  margin-bottom: 2vh;
+  margin-top: 3vh;
+}
+
+.content-register__informations-item > section div:last-child {
+  margin-left: 5vh;
+}
+
+.content-register__informations-item > section {
+  display: flex;
+
+  align-items: center;
+}
+
+.information-bold {
+  color: #4a555d;
+  font-weight: 1000;
+}
+
+.content-register__informations-item > div {
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+}
+
+.content-register__informations-work > section {
+  display: block;
+  margin-bottom: 3.4vh;
+}
+
+.content-register__informations-work > section div:last-child {
+  /* margin-left: 3vh; */
+}
+
+.information-blue {
+  color: #0066f0;
+}
+
+.button {
+  margin-right: 3vh;
+}
+
+.button button {
+  transition: filter 0.3s;
+}
+
+.button button:hover {
+  filter: brightness(0.7);
+}
+
+.button > button {
+  /* padding: 0vh 0vh 4vh; */
+  font-size: 1.87vh;
+  height: 5vh;
+  width: 22vh;
+  color: white;
+  border: none;
+  border-radius: 3vh;
+  padding-bottom: 0.31vh;
+}
+
+.button > button:first-child {
+  background-color: #f00000;
+}
+.button > button:last-child {
+  background-color: #0066f0;
+}
