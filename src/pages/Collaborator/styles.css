@@ -18,12 +18,12 @@
   color: rgb(74, 85, 93);
   font-size: 3vh;
   font-weight: 400;
-  margin-left: 3vh;
 }
 
 .title > div {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .title > div section {
@@ -37,7 +37,7 @@
 .title::after {
   content: "";
   width: 98%;
-  height: 4.01vh;
+  height: 2vh;
   border-bottom-color: rgb(171, 171, 171);
   border-bottom-style: solid;
   border-bottom-width: 0.3vh;
@@ -58,12 +58,31 @@
   .body-collarotor {
     display: flex;
   }
+
+  .body-collarotor__profile {
+    background-color: rgb(255, 255, 255);
+    margin-top: 4vh;
+    margin-left: 3vh;
+    display: block;
+    min-width: 50vh;
+    margin-right: 11vh;
+    height: 57vh;
+    border-radius: 1vh;
+    box-shadow: 0.1vh 0.14vh 0.3vh 0.1vh rgb(0 0 0 / 20%);
+  }
+  .collaborator-history-list > li {
+    width: 46vh;
+  }
 }
 
 @media (max-width: 100vh) {
   .collaborator-history-list {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .collaborator-history > h2:first-child {
+    width: 52vh;
   }
 
   .collaborator-container > .body {
@@ -73,24 +92,28 @@
 
   .body-collarotor {
     display: block;
+    margin-left: 4vh;
+  }
+
+  .body-collarotor__profile {
+    background-color: rgb(255, 255, 255);
+    margin-top: 4vh;
+    display: block;
+    width: 58vh;
+    margin-right: 11vh;
+    height: 57vh;
+    border-radius: 1vh;
+    box-shadow: 0.1vh 0.14vh 0.3vh 0.1vh rgb(0 0 0 / 20%);
+  }
+
+  .collaborator-history-list > li {
+    width: 52vh;
   }
 }
 
 .collaborator-history-list > li p {
   margin-left: 2vh;
   font-size: 2.2vh;
-}
-
-.body-collarotor__profile {
-  background-color: rgb(255, 255, 255);
-  margin-top: 4vh;
-  margin-left: 3vh;
-  display: block;
-  width: 58vh;
-  margin-right: 11vh;
-  height: 57vh;
-  border-radius: 1vh;
-  box-shadow: 0.1vh 0.14vh 0.3vh 0.1vh rgb(0 0 0 / 20%);
 }
 
 .body-collarotor__profile > section:first-child {
@@ -209,7 +232,6 @@
   text-align: center;
   align-items: center;
   color: rgb(74, 85, 93);
-  width: 46vh;
 }
 
 .collaborator-history-list__point {
@@ -244,4 +266,12 @@
 
 .information-orange {
   color: #e8b100;
+}
+
+.button button {
+  transition: filter 0.3s;
+}
+
+.button button:hover {
+  filter: brightness(0.7);
 }

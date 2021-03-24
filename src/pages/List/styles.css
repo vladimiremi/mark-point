@@ -1,76 +1,74 @@
 .list-container {
-    display: block;
+  display: block;
 }
 
 .list-container > .body {
-
-    margin: 0vh 15vh 0;
-    width: 92.5%;
-    background-color: rgb(248, 248, 248);
-    
-   
+  margin: 0vh 15vh 0;
+  width: 92.5%;
+  background-color: rgb(248, 248, 248);
 }
 
-
 .list-container > .body section {
-    display: block;
-    list-style: none;
-    padding-top: 14vh;
+  display: block;
+  list-style: none;
+  padding-top: 14vh;
 }
 
 .list-container > .body ul {
-    list-style: none;
+  list-style: none;
 }
-
 
 .list-container > .body h2 {
-    color: rgb(74, 85, 93);
-    font-size: 3vh;
-    font-weight: 300;
-    margin-left: 3vh;
+  color: rgb(74, 85, 93);
+  font-size: 3vh;
+  font-weight: 400;
+  margin-left: 3vh;
 }
 
-
-
-@media (min-width:100vh) {
-    .collaborator-list {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
+@media (min-width: 100vh) {
+  .collaborator-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media (max-width:100vh) {
-    .collaborator-list {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
+@media (max-width: 100vh) {
+  .collaborator-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 
-    .list-container > .body {
-        width: 94.5%;
-        margin: 0vh 2vh 0;
-    }
+  .list-container > .body {
+    width: 94.5%;
+    margin: 0vh 2vh 0;
+  }
 }
 
 .collaborator-list > li {
-    margin: 2.5vh;
-    box-shadow: 0.1vh 0.14vh 0.3vh 0.1vh rgb(0 0 0 / 20%);
-    border-radius: 0.3vh;
-    background-color: rgb(255, 255, 255);
-    padding: 2vh 3vh 2vh;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    color: rgb(74, 85, 93);
+  margin: 2.5vh;
+  box-shadow: 0.1vh 0.14vh 0.3vh 0.1vh rgb(0 0 0 / 20%);
+  border-radius: 0.3vh;
+  background-color: rgb(255, 255, 255);
+  padding: 2vh 3vh 2vh;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  color: rgb(74, 85, 93);
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.collaborator-list > li:hover {
+  filter: brightness(0.9);
 }
 
 .collaborator-list > li img {
-    width: 6.3vh;
-    height: 6.3vh;
-    border-radius: 50%;
+  width: 6.3vh;
+  height: 6.3vh;
+  border-radius: 50%;
 }
 
-.collaborator-list > li p{
-    margin-left: 2vh;
-    font-size: 2.2vh;
+.collaborator-list > li p {
+  margin-left: 2vh;
+  font-size: 2.2vh;
 }
-

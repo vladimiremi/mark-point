@@ -18,7 +18,6 @@
   color: rgb(74, 85, 93);
   font-size: 3vh;
   font-weight: 400;
-  margin-left: 3vh;
 }
 
 .register-title > div {
@@ -68,7 +67,7 @@
   margin-bottom: 4vh;
   margin-left: 3vh;
   display: block;
-  width: 61vh;
+  width: 62.8vh;
   margin-right: 11vh;
   height: 79vh;
   border-radius: 1vh;
@@ -95,6 +94,11 @@
   padding: 2vh 2vh 1vh;
   border-radius: 50%;
   font-size: 4.9vh;
+  transition: filter 0.3s;
+}
+
+.content-register__profile > section:first-child div:first-child:hover {
+  filter: brightness(0.7);
 }
 
 .content-register__profile > section:first-child div p {
@@ -103,7 +107,7 @@
 
 .content-register__informations {
   font-size: 2vh;
-  margin-left: 6vh;
+  margin-left: 5vh;
 }
 
 .content-register__informations input {
@@ -112,6 +116,7 @@
   padding: 1.7vh 0vh 2vh;
   font-size: 1.87vh;
   font-weight: 600;
+  width: 24.5vh;
 }
 
 .content-register__informations input::-webkit-input-placeholder {
@@ -121,9 +126,10 @@
 .content-register__profile > section input {
   border: none;
   border-bottom: #0000002e solid 0.22vh;
-  padding: 1.7vh 10vh 2vh 0vh;
+  padding: 1.7vh 1vh 2vh 0vh;
   font-size: 2.5vh;
   margin-left: 2vh;
+  width: 42vh;
   align-items: center;
 }
 
@@ -179,6 +185,14 @@
 
 .button {
   margin-right: 3vh;
+}
+
+.button button {
+  transition: filter 0.3s;
+}
+
+.button button:hover {
+  filter: brightness(0.7);
 }
 
 .button > button {

@@ -1,39 +1,42 @@
 .drawer {
-    display: block;
-    height: 100vh;
-    width: 14vh;
-    box-shadow: 3px 3px 3px 1px rgb(0 0 0 / 20%);
-    align-items: center;
-    justify-content: center;
-    margin-top: 10.3vh;
-    position: fixed;
-    background-color: rgb(255, 255, 255);
+  display: block;
+  height: 100vh;
+  width: 14vh;
+  box-shadow: 3px 3px 3px 1px rgb(0 0 0 / 20%);
+  align-items: center;
+  justify-content: center;
+  margin-top: 11vh;
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
-
 .drawer p {
-    font-size: 2vh;
-    color: rgb(74, 85, 93);
-
+  font-size: 2vh;
+  color: rgb(74, 85, 93);
 }
 
 .icon-drawer {
-    text-align: center;
-    padding-top: 4vh;
+  text-align: center;
+  padding-top: 4vh;
+  transition: filter 0.2s;
+}
+
+.icon-drawer:hover {
+  filter: brightness(1.5);
 }
 
 .drawer > div:first-child:after {
-    content: "";
-    width: 86%;
-    height: 4.01vh;
-    border-bottom-color: rgb(171, 171, 171);
-    border-bottom-style: solid;
-    border-bottom-width: 0.3vh;
-    display: block;
-    margin: 0 auto;
+  content: "";
+  width: 86%;
+  height: 4.01vh;
+  border-bottom-color: rgb(171, 171, 171);
+  border-bottom-style: solid;
+  border-bottom-width: 0.3vh;
+  display: block;
+  margin: 0 auto;
 }
 
 .list-container > .body {
-    margin-left: 2vh;
+  margin-left: 2vh;
 }
-
