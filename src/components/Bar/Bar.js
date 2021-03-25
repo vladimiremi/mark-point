@@ -17,7 +17,10 @@ export default function Bar() {
                         <IoMdNotificationsOutline />
                         <p>3</p>
                     </div>
-                    <BsGrid/>
+                    <section className="icon-bar">
+                        <BsGrid/>
+                    </section>
+                    
                     <p className="userName">Vladimir Costa</p> 
     
                     <img src={profile} alt=""/>

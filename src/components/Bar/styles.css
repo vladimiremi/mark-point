@@ -33,6 +33,18 @@
 
 .bar > section div:first-child {
   display: flex;
+  transition: filter 0.2s;
+}
+
+.bar > section div:first-child:hover {
+  filter: brightness(0.7);
+}
+
+.icon-bar {
+  transition: filter 0.2;
+}
+.icon-bar:hover {
+  filter: brightness(0.7);
 }
 
 .bar > section div:first-child > p {

@@ -2,7 +2,8 @@ import { IoMdCamera } from "react-icons/io";
 import Bar from "../../components/Bar/Bar";
 import './styles.css';
 import api from '../../services/api';
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useHistory } from "react-router";
 
 export default function Register() {
     const [name, setName] = useState();
@@ -14,9 +15,34 @@ export default function Register() {
     const [endtexpedient, setEndtexpedient] = useState();
     const [startlunch, setStartlunch] = useState();
     const [endlunch, setEndlunch] = useState();
-    const id_admin = localStorage.getItem('id_admin');
 
-    function handleRegister(e) {
+    const id_admin = localStorage.getItem('id_admin');
+    const idInfCollaborator = localStorage.getItem('idInfCollaborator');
+
+
+    const [informationsColaborator, setInformationsColaborator] = useState()
+
+    
+
+    const history = useHistory();
+
+    useEffect(()=>{
+        try {
+            //informações do colaborador
+            api.get(`informations-collaborator/${idInfCollaborator}`, {
+                headers: {
+                    Authorization: id_admin,
+                }
+            }).then(response => {
+                setInformationsColaborator(response.data[0]);
+            });
+
+        } catch(err){
+
+        }
+    }, []);
+
+    async function handleRegister(e) {
         e.preventDefault();
 
         const data = {
@@ -32,11 +58,13 @@ export default function Register() {
         };
 
         try {
-            api.post('register-collaborator', data, {
+            await api.put(`update-collaborator/${idInfCollaborator}`, data, {
                 headers: {
                     Authorization: id_admin,
                 }
-            });
+            })
+            history.push('/collaborator');
+
             alert("Colaborador cadastrado com sucesso!")
             setName('');
             setCpf('');
@@ -50,7 +78,7 @@ export default function Register() {
 
 
         }catch(err) {
-            alert("Erro ao tentar registrar, por favor tente novamente!" + err);
+            alert("Erro ao tentar atualizar colaborador, por favor tente novamente!" + err);
         }
 
         
@@ -68,6 +96,8 @@ export default function Register() {
         setEndtexpedient('');
         setStartlunch('');
         setEndlunch('');
+
+        history.push('/collaborator');
     }
 
     return(
@@ -78,7 +108,7 @@ export default function Register() {
                 <section>
                         <div className="register-title">
                             <div>
-                                <h2>Adicionar Colaborador</h2>
+                                <h2>Editar Colaborador</h2>
                                 <section className="button">
                                     <button onClick={clearRegisters}>Cancelar</button>
                                     <button onClick={handleRegister}>Salvar</button>
@@ -96,7 +126,7 @@ export default function Register() {
                                         </div>
                                         <input 
                                             placeholder="Nome do colaborador"
-                                            value={name}
+                                            defaultValue={informationsColaborator?.name}
                                             onChange={ e =>setName(e.target.value) }
                                         />
                                     </section>
@@ -107,7 +137,8 @@ export default function Register() {
                                                 <div>
                                                     <p className="information-bold">CPF</p>
                                                     <input
-                                                        value={cpf}
+                                                        
+                                                        defaultValue={informationsColaborator?.cpf}
                                                         onChange={ e =>setCpf(e.target.value) }
                                                         placeholder="Digite o CPF"
                                                     />
@@ -116,7 +147,8 @@ export default function Register() {
                                                     <p className="information-bold">E-mail</p>
                                                     <input 
                                                         placeholder="Digite seu E-mail"
-                                                        value={email}
+                                                        
+                                                        defaultValue={informationsColaborator?.email}
                                                         onChange={ e =>setEmail(e.target.value) }
                                                     />
                                                 </div>
@@ -128,7 +160,8 @@ export default function Register() {
                                                 <p className="information-bold">Telefone</p>
                                                 <input 
                                                     placeholder="(xx) xxxx-xxxx"
-                                                    value={phone}
+                                                    
+                                                    defaultValue={informationsColaborator?.phone}
                                                     onChange={ e =>setPhone(e.target.value) }
                                                 />
                                             </div>
@@ -143,7 +176,8 @@ export default function Register() {
                                                     <p className="information-bold information-blue">Ocupação</p>
                                                     <input 
                                                         placeholder="Ocupação do colaborador?"
-                                                        value={occupation}
+                                                        
+                                                        defaultValue={informationsColaborator?.occupation}
                                                         onChange={ e =>setOccupation(e.target.value) }
                                                     />
                                                 </div>
@@ -152,12 +186,14 @@ export default function Register() {
                                                     <section>
                                                         <input 
                                                             placeholder="Horário de entrada"
-                                                            value={startexpedient}
+                                                            
+                                                            defaultValue={informationsColaborator?.startexpedient.slice(0, 5)}
                                                             onChange={ e =>setStartexpedient(e.target.value) }
                                                         />
                                                         <input 
                                                             placeholder="Horário de saída"
-                                                            value={endtexpedient}
+                                                            
+                                                            defaultValue={informationsColaborator?.endtexpedient.slice(0, 5)}
                                                             onChange={ e =>setEndtexpedient(e.target.value) }
                                                         />
                                                     </section>
@@ -169,12 +205,14 @@ export default function Register() {
                                                     <section>
                                                         <input 
                                                             placeholder="Horário de entrada"
-                                                            value={startlunch}
+                                                            
+                                                            defaultValue={informationsColaborator?.startlunch.slice(0, 5)}
                                                             onChange={ e =>setStartlunch(e.target.value) }
                                                         />
                                                         <input 
                                                             placeholder="Horário de saída"
-                                                            value={endlunch}
+                                                            
+                                                            defaultValue={informationsColaborator?.endlunch.slice(0, 5)}
                                                             onChange={ e =>setEndlunch(e.target.value) }
                                                         />
                                                     </section>
