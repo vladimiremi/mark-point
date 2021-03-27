@@ -43,7 +43,6 @@ export default function Collaborator() {
                   }
             
                   setPointsOfDay(pointsDay);
-                  console.log(pointsDay)
 
 
 

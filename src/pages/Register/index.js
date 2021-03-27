@@ -16,7 +16,7 @@ export default function Register() {
     const [endlunch, setEndlunch] = useState();
     const id_admin = localStorage.getItem('id_admin');
 
-    function handleRegister(e) {
+    async function handleRegister(e) {
         e.preventDefault();
 
         const data = {
@@ -32,12 +32,14 @@ export default function Register() {
         };
 
         try {
-            api.post('register-collaborator', data, {
+            const sucsessRegister = await api.post('register-collaborator', data, {
                 headers: {
                     Authorization: id_admin,
                 }
             });
+
             alert("Colaborador cadastrado com sucesso!")
+            
             setName('');
             setCpf('');
             setEmail('');
@@ -47,8 +49,7 @@ export default function Register() {
             setEndtexpedient('');
             setStartlunch('');
             setEndlunch('');
-
-
+            
         }catch(err) {
             alert("Erro ao tentar registrar, por favor tente novamente!" + err);
         }
