@@ -41,8 +41,10 @@ export default function Collaborator() {
                 for (var i = 0; i < response.data.length; i = i + corte) {
                     pointsDay = [...pointsDay, response.data.slice(i, i + corte)]
                   }
+
+                console.log()
             
-                  setPointsOfDay(pointsDay);
+                  setPointsOfDay(pointsDay.reverse());
 
 
 
